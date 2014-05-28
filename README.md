@@ -1,4 +1,4 @@
 cvform
 ======
 
-Formularios para llenar tu curriculum
+Formularios para llenar tu curriculum vitae
