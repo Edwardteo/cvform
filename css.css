@@ -95,3 +95,10 @@ footer
 	margin-left: 20px;
 	margin-top: 20px
 }
+.msg{
+	text-align:center;
+	background-color:#3A3;
+	color:#FFF;
+	font:bold 12px Arial;
+	padding:3px 0;
+}

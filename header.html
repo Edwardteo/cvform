@@ -9,6 +9,9 @@
 <body >
 <div class="main">
 	<header>
+		<?php if(!empty($msg)){?>
+		<div class="msg"><?php echo $msg;?></div>
+		<?php }?>
 		<h1>Crea Tu Curriculum en 5 Pasos</h1>
 		<?php if($sec!=="portada"){?>
 		<section>

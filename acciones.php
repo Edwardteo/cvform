@@ -2,6 +2,7 @@
 session_start();
 include_once "db_config.php";
 include_once "db_class.php";
+$msg="";
 if(isset($_POST['table'])){
 	$table=$_POST['table'];
 	unset($_POST['table']);
@@ -37,6 +38,7 @@ if(isset($_POST['table'])){
 			$row=$res->fetch_assoc();
 			$data['id_personales']=$row['id_personales'];
 			$dbc->inserta($table,$data);
+			$msg="Registro guardado, Ingrese otro o de click en Siguiente para continuar";
 		}else{
 			header("Location: index.php");
 		}
