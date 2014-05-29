@@ -1,5 +1,12 @@
-<form class="form" action="index.php?sec=escolaridad" method="post">
-	<label>Nombre:</label><input type="text" name="nombre"></br></br>
+
+<script>
+    $(function(){
+        $('#form1').validate();
+    }
+</script>
+
+<form id="form1" class="form" action="index.php?sec=escolaridad" method="post">
+	<label>Nombre:</label><input class="required" type="text" name="nombre"></br></br>
 	<label>Apellido Paterno:</label><input type="text" name="apaterno"></br></br>
 	<label>Apellido Materno:</label><input type="text" name="amaterno"></br></br>
 	<label>Fecha de Nacimiento:</label><input type="text" name="fecha_nacimiento[]" style="width:50px">
