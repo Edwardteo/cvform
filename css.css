@@ -66,13 +66,32 @@ footer
 }
 #body
 {
+	width: 960px;
+	margin: 0 auto;
 	background-image: none;
 	background-color: #FFF;
 }
 #centro
 {
-	width: 960px;
 	margin: 0 auto;
 	text-align: center;
-	font-family: calibri;	
+	font-family: calibri;
+	border-radius: 20px;
+	padding: 2px;
+	background-color: #0080FF;	
+	color: #FFFFFF;
+}
+#titulo
+{
+	border-style: outset;
+	border-color: #F25FF;
+	border-right: none;
+	border-left: none;
+	margin: 0 auto;
+}
+#datos
+{
+	font:50%/150% calibri;
+	margin-left: 20px;
+	margin-top: 20px
 }
