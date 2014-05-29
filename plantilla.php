@@ -62,5 +62,9 @@
 					<?php } ?>
 				</div>
 			</section>
+			<div id="izq">
+				<input type="button" value="Nuevo" onclick="location.href='salida.php'" style="width:100px;height:50px"></br>
+				<input type="button" value="Imprimir" onclick="print();" style="width:100px;height:50px"></br>
+			</div>
 	</body>
 </html>
