@@ -1,8 +1,9 @@
-<form class="form">
+<form class="form" action="index.php?sec=plantilla" method="post">
 	<label>Nombre de Herramienta:</label><input type="text" name="nombre_herramienta"></br></br>
 	<label>Descripcion:</label><input type="text" name="descripcion" style="width:500px;height:100px"></br></br>
 	<label>Dominio(%):</label><input type="text" name="dominio" style="width:50px"></br></br>
+	<input type="hidden" name="table" value="herramientas"/>
 	<div id="izq">
-			<input type="button" value="Finalizar" onclick="location.href='index.php?sec=plantilla'" style="width:100px;height:50px"></br></br></br>
+			<input type="submit" value="Finalizar" style="width:100px;height:50px"></br></br></br>
 		</div>
 </form>

@@ -1,4 +1,4 @@
-<form class="form">
+<form class="form" action="index.php?sec=escolaridad" method="post">
 	<label>Nombre:</label><input type="text" name="nombre"></br></br>
 	<label>Apellido Paterno:</label><input type="text" name="apaterno"></br></br>
 	<label>Apellido Materno:</label><input type="text" name="amaterno"></br></br>
@@ -55,7 +55,8 @@
 	<label>Codigo Postal:</label><input type="text" name="codigo_postal" style="width:100px"></br></br>
 	<label>Telefono:</label><input type="text" name="telefono"></br></br>
 	<label>Email:</label><input type="text" name="email"></br></br>
+	<input type="hidden" name="table" value="personales"/>
 		<div id="izq">
-			<input type="button" value="Siguiente" onclick="location.href='index.php?sec=escolaridad'" style="width:100px;height:50px"></br></br></br>
+			<input type="submit" value="Siguiente" style="width:100px;height:50px"></br></br></br>
 		</div>
 </form>
