@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "db_config.php";
 include_once "db_class.php";
 if(isset($_POST['table'])){
@@ -12,25 +13,28 @@ if(isset($_POST['table'])){
 		"base"=>DB_BASE
 	);
 	$dbc=new cv_db($params);
-	$id_personales=session_id();
+	$session=session_id();
 	foreach($data as $key => $val){
 		if(strstr($key,"fecha_")!== FALSE){
 			$data[$key]=$val[0]."-".$val[1]."-".$val[2];
 		}
 
 	}
-	print_r($data);
 	if($table=="personales"){
-		$qry="SELECT * from personales where id_personales='{$id_personales}'";
+		$qry="SELECT id_personales from personales where session_id='{$session}'";
 		$res=$dbc->consulta($qry);
+		$row=$res->fetch_assoc();
 		if($res->num_rows>0){
-			$dbc->actualiza($table,"id_".$table,$id_personales,$_POST);
+			$dbc->actualiza($table,"id_".$table,$row['id_personales'],$data);
 		}else{
-			$dbc->inserta($table,$_POST);
-			session_id($dbc->db->insert_id);
+			$data['session_id']=session_id();
+			$dbc->inserta($table,$data);
 		}
 	}else{
-		$data['id_personales']=session_id();
+		$qry="SELECT id_personales from personales where session_id='{$session}'";
+		$res=$dbc->consulta($qry);
+		$row=$res->fetch_assoc();
+		$data['id_personales']=$row['id_personales'];
 		$dbc->inserta($table,$data);
 	}
 }
