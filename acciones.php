@@ -33,9 +33,13 @@ if(isset($_POST['table'])){
 	}else{
 		$qry="SELECT id_personales from personales where session_id='{$session}'";
 		$res=$dbc->consulta($qry);
-		$row=$res->fetch_assoc();
-		$data['id_personales']=$row['id_personales'];
-		$dbc->inserta($table,$data);
+		if($res->num_rows>0){
+			$row=$res->fetch_assoc();
+			$data['id_personales']=$row['id_personales'];
+			$dbc->inserta($table,$data);
+		}else{
+			header("Location: index.php");
+		}
 	}
 }
 ?>
