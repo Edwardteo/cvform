@@ -16,25 +16,25 @@ $params=array(
 	{
 		$personales=$res->fetch_assoc();
 		$id=$personales["id_personales"];
-		$qry="SELECT * from escolaridad where session_id='{$session}'";
+		$qry="SELECT * from escolaridad where id_personales='{$id}'";
 		$res=$dbc->consulta($qry);
 		$escolaridad=array();
 		while($row=$res->fetch_assoc()){
 			$escolaridad[]=$row;
 		}
-		$qry="SELECT * from experiencia where session_id='{$session}'";
+		$qry="SELECT * from experiencia where id_personales='{$id}'";
 		$res=$dbc->consulta($qry);
 		$experiencia=array();
 		while($row=$res->fetch_assoc()){
 			$experiencia[]=$row;
 		}
-		$qry="SELECT * from idiomas where session_id='{$session}'";
+		$qry="SELECT * from idiomas where id_personales='{$id}'";
 		$res=$dbc->consulta($qry);
 		$idiomas=array();
 		while($row=$res->fetch_assoc()){
 			$idiomas[]=$row;
 		}
-		$qry="SELECT * from herramientas where session_id='{$session}'";
+		$qry="SELECT * from herramientas where id_personales='{$id}'";
 		$res=$dbc->consulta($qry);
 		$herramientas=array();
 		while($row=$res->fetch_assoc()){
@@ -47,6 +47,4 @@ $params=array(
 		$data['herramientas']=$herramientas;
 		include 'plantilla.php';
 	}
-
 ?>
-$data['personales']=$personales;
