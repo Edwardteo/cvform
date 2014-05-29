@@ -1,4 +1,5 @@
 <?php
+session_start();
 $sec="portada";
 if(isset($_GET['sec'])){
 	$sec=$_GET['sec'];
