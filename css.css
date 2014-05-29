@@ -28,10 +28,10 @@ li
 header
 {
 	width: 960px;
-	margin-left: 0px;
+	margin-left: -35px;
 	font-family: calibri;
 	text-align: center;	
-	margin-bottom:-20px;
+	margin-bottom:-15px;
 }
 body
 {
@@ -49,8 +49,25 @@ footer
 	margin: 0 auto;
 	width: 960px;
 	text-align: left;
-	border-radius: 0 0 20px 20px;
+	border-radius: 20px;
 	padding: 5px;
 	color:#FFF;
 	background-color: #BDBDBD;	
+}
+#izq
+{
+	margin-right: 30px;
+	text-align: right;
+}
+#body
+{
+	background-image: none;
+	background-color: #FFF;
+}
+#centro
+{
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: calibri;	
 }
