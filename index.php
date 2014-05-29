@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css.css">
+
 <?php
 $sec="portada";
 if(isset($_GET['sec'])){
