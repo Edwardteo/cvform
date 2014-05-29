@@ -14,13 +14,15 @@ if(isset($_POST['table'])){
 	$dbc=new cv_db($params);
 	$id_personales=session_id();
 	foreach($data as $key => $val){
-		if(strstr("fecha_",$key)!== FALSE){
+		if(strstr($key,"fecha_")!== FALSE){
 			$data[$key]=$val[0]."-".$val[1]."-".$val[2];
 		}
+
 	}
+	print_r($data);
 	if($table=="personales"){
 		$qry="SELECT * from personales where id_personales='{$id_personales}'";
-		$res=$dbc->consulta();
+		$res=$dbc->consulta($qry);
 		if($res->num_rows>0){
 			$dbc->actualiza($table,"id_".$table,$id_personales,$_POST);
 		}else{

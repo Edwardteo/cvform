@@ -1,6 +1,6 @@
 <?php
 class cv_db{
-	private $db;
+	public $db;
 	public function __construct($params){
 		if(
 			isset($params['host']) &&
@@ -28,14 +28,14 @@ class cv_db{
 		if(!empty($datos) && !empty($table) && is_array($datos)){
 			$str_campos="";
 			$str_values="";
-			foreach($data as $campo => $valor){
+			foreach($datos as $campo => $valor){
 				$str_campos.="{$campo},";
-				$str_valores.="'".str_replace(array("'",'"'),"",$valor)."',";
+				$str_values.="'".str_replace(array("'",'"'),"",$valor)."',";
 			}
 			$str_campos=substr($str_campos,0,-1);
-			$str_valores=substr($str_valores,0,-1);
+			$str_values=substr($str_values,0,-1);
 			$qry="Insert into {$table}({$str_campos}) values({$str_values})";
-			if($this->db->consulta($qry)){
+			if($this->consulta($qry)){
 				return true;
 			}else{
 				return false;
