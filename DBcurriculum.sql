@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-05-2014 a las 06:55:11
+-- Tiempo de generación: 29-05-2014 a las 08:12:12
 -- Versión del servidor: 5.1.36
 -- Versión de PHP: 5.3.0
 
@@ -113,6 +113,7 @@ CREATE TABLE IF NOT EXISTS `personales` (
   `codigo_postal` varchar(10) DEFAULT NULL,
   `telefono` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
+  `session_id` varchar(50) NOT NULL,
   PRIMARY KEY (`id_personales`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
