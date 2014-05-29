@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-05-2014 a las 08:12:12
+-- Tiempo de generación: 29-05-2014 a las 08:47:22
 -- Versión del servidor: 5.1.36
 -- Versión de PHP: 5.3.0
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `escolaridad` (
 CREATE TABLE IF NOT EXISTS `experiencia` (
   `id_experiencia` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `id_personales` mediumint(8) unsigned NOT NULL,
-  `nombre_emresa` varchar(255) DEFAULT NULL,
+  `nombre_empresa` varchar(255) DEFAULT NULL,
   `fecha_inicio` date DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL,
   `puesto` varchar(100) DEFAULT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `experiencia` (
 CREATE TABLE IF NOT EXISTS `herramientas` (
   `id_herramientas` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `id_personales` mediumint(8) unsigned NOT NULL,
-  `nombre_heramienta` varchar(50) DEFAULT NULL,
+  `nombre_herramienta` varchar(50) DEFAULT NULL,
   `descripcion` varchar(255) DEFAULT NULL,
   `dominio` varchar(3) DEFAULT NULL,
   PRIMARY KEY (`id_herramientas`)
