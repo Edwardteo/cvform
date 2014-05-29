@@ -5,16 +5,17 @@
 	<link rel="stylesheet" href="css.css">
 </head>
 <body >
+<div class="main">
 	<header>
 		<h1>Crea Tu Curriculum en 5 Pasos</h1>
 		<section>
 			<nav>
 		        <ul>
-	                <li><a href="personales.html">Datos Personales</a></li>
-	                <li><a href="escolaridad.html">Escolaridad</a></li>
-	                <li><a href="experiencia.html">Experiencia</a></li>
-	                <li><a href="idiomas.html">Idiomas</a></li>
-	                <li><a href="herramientas.html">Herramientas</a></li>
+					<li<?php if($sec=="personales"){ echo " class='active'";}?>><a href="index.php?sec=personales">Datos Personales</a></li>
+	                <li<?php if($sec=="escolaridad"){ echo " class='active'";}?>><a href="index.php?sec=escolaridad">Escolaridad</a></li>
+	                <li<?php if($sec=="experiencia"){ echo " class='active'";}?>><a href="index.php?sec=experiencia">Experiencia</a></li>
+	                <li<?php if($sec=="idiomas"){ echo " class='active'";}?>><a href="index.php?sec=idiomas">Idiomas</a></li>
+	                <li<?php if($sec=="herramientas"){ echo "class='active'";}?>><a href="index.php?sec=herramientas">Herramientas</a></li>
 	            </ul>
 	        </nav>
 	    </section>

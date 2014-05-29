@@ -1,20 +1,18 @@
+nav ul{
+	margin:0;
+}
 nav ul li
 {
 	display: inline-block;
 	padding: 10px;
+	background-color:#FFF;
+	border-radius:5px 5px 0 0;
+	border:1px solid #000;
+	margin-bottom:-1px;
 }
-li
+nav ul li.active
 {
-	margin-right: 1px;
-	margin-left: 1px;
-	font-weight:bold;
-	border-style: outset;
-	border-color: #F25FF;
-	margin:-3px;
-}
-.active
-{
-	border-bottom: none;
+	border-bottom:1px solid #FFF;
 }
 .centrar
 {
@@ -27,11 +25,8 @@ li
 }
 header
 {
-	width: 960px;
-	margin-left: -35px;
 	font-family: calibri;
 	text-align: center;	
-	margin-bottom:-15px;
 }
 body
 {
@@ -46,13 +41,23 @@ body
 }
 footer
 {
-	margin: 0 auto;
-	width: 960px;
 	text-align: left;
 	border-radius: 20px;
 	padding: 5px;
 	color:#FFF;
 	background-color: #BDBDBD;	
+}
+.main{
+	width:960px;
+	margin:0 auto;
+}
+.form{
+	background-color:#FFF;
+	border:1px solid #000;
+	border-radius:20px;
+	margin-bottom:20px;
+	padding:20px;
+	z-index:1;
 }
 #izq
 {

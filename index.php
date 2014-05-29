@@ -1,4 +1,3 @@
-
 <?php
 $sec="portada";
 if(isset($_GET['sec'])){
@@ -9,9 +8,9 @@ if(!empty($_POST)){
 }
 include "header.html";
 if(file_exists($sec.".html")){
-	include "portada.html";
+	include $sec.".html";
 }elseif(file_exists($sec.".php")){
-	include "portada.php";
+	include $sec.".php";
 }else{
 	echo "<div class='msg404'>404 Not Found</div>";
 }
