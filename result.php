@@ -46,5 +46,6 @@ $params=array(
 		$data['idiomas']=$idiomas;
 		$data['herramientas']=$herramientas;
 		include 'plantilla.php';
+
 	}
 ?>

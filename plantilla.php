@@ -1,30 +1,3 @@
-<?php
-$data['herramientas'][0]['nombre_herramienta']="C#";
-$data['herramientas'][0]['descripcion']="asdasdas das d asd asd as da sd asd a sd asd sd sa d as d asd as d as d asd as dsa d100";
-$data['herramientas'][0]["dominio"]="100";
-$data['idiomas'][0]['idioma']="Ingles";
-$data['idiomas'][0]['dominio']="100";
-$data['idiomas'][0]["certificado"]="pet";
-$data['escolaridad'][0]['nombre_escuela']="Josefa Ortiz de Dominguez";
-$data['escolaridad'][0]['fecha_inicio']="1999-01-01";
-$data['escolaridad'][0]["fecha_fin"]="2006-01-01";
-$data['escolaridad'][0]["nivel"]="Primaria";
-$data['experiencia'][0]['nombre_empresa']="Josefa Ortiz de Dominguez";
-$data['experiencia'][0]['fecha_inicio']="1999-01-01";
-$data['experiencia'][0]["fecha_fin"]="2006-01-01";
-$data['experiencia'][0]["puesto"]="Primaria";
-$data['experiencia'][0]["funciones"]="Primaria";
-$data['personales']["nombre"]="Eduardo";
-$data['personales']["apaterno"]="Teofilo";
-$data['personales']["amaterno"]="Ontiveros";
-$data['personales']["fecha_nacimiento"]="1992-10-18";
-$data['personales']["nacionalidad"]="Mexicano";
-$data['personales']["estado_civil"]="Soltero";
-$data['personales']["codigo_postal"]="54110";
-$data['personales']["telefono"]="5540724638";
-$data['personales']["email"]="eteo92@gmail.com";
-?>
-
 <!DOCTYPE html>
 <html  lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -38,7 +11,7 @@ $data['personales']["email"]="eteo92@gmail.com";
 				<div id="titulo"><label>Datos Personales</label></div>
 				<div id="datos">
 					<label>Nombre: <?php echo $data['personales']['nombre']?> <?=$data['personales']['apaterno']?> <?=$data['personales']['amaterno']?></label></br>
-					<label>Fecha de Nacimiento: <?=$data['personales']['fecha_nacimiento']?></label></br>
+					<label>Fecha de Nacimiento: <?php echo $data['personales']['fecha_nacimiento']?></label></br>
 					<label>Nacionalidad: <?php echo $data['personales']['nacionalidad']?></label></br>
 					<label>Estado Civil: <?php echo $data['personales']['estado_civil']?></label></br>
 					<label>Codigo Postal: <?php echo $data['personales']['codigo_postal']?></label></br>
