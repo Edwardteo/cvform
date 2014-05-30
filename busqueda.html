@@ -1,0 +1,8 @@
+<div class="form">
+	<div class="results">
+		<h3>Resultados:</h3>
+	<?php foreach($results as $i => $res){?>
+	<div style="padding-left:30px;"><span style="margin-right:30px"><?php echo $i?></span><a href="result.php?id=<?php echo $res['session']?>"><?php echo $res['nombre']." ".$res['apaterno']." ".$res['amaterno']?></a></div>
+	<?php }?>
+	</div>
+</div>

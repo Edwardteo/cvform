@@ -9,7 +9,11 @@ $params=array(
 		"base"=>DB_BASE
 	);
 	$dbc=new cv_db($params);
-	$session=session_id();
+	if(!empty($_GET['id'])){
+		$session=str_replace(array("'",'"'),"",$_GET['id']);
+	}else{
+		$session=session_id();
+	}
 	$qry="SELECT * from personales where session_id='{$session}'";
 	$res=$dbc->consulta($qry);
 	if($res->num_rows>0)
