@@ -14,5 +14,8 @@ if(file_exists($sec.".html")){
 }else{
 	echo "<div class='msg404'>404 Not Found</div>";
 }
+if(isset($_GET['q'])){
+	include "busqueda.php";
+}
 include "footer.html";
 ?>

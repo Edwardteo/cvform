@@ -2,7 +2,16 @@
 </br>
 </br>
 	<h3><label>Crea tu Curriculum Vitae en nuestro portal o busca a algunos de nuestros miembros que ya lo hiciceron</label></h3></br></br>
-	<form >
-	 	<input type="button" value="Registrate" onclick="location.href='index.php?sec=personales'" style="width:100px;height:50px"></br></br></br>
-	</form>
+	<input type="button" value="Registrate" onclick="location.href='index.php?sec=personales'" style="width:100px;height:50px"></br></br></br>
+	<div>
+		<form action="index.php" method="get">
+			<select name="from" style="width:300px;">
+				<option value="escolaridad">Por escuela</option>
+				<option value="herramientas">Por conocimientos</option>
+				<option value="personales">Por nombre</option>
+			</select><br />
+			<input type="text" name="q" value="" />
+			<input type="submit" value="Buscar" style="width:100px;"></br></br></br>
+		</form>
+	</div>
 </section>
